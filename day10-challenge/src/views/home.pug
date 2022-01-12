@@ -1,0 +1,14 @@
+extends base.pug
+include ./mixins/movie
+
+block makingForm 
+        form(method="GET" action="/filter")
+            input(type="text", placeholder="Filter by year", name="year")
+            input(type="text", placeholder="Filter by rating", name="rating")
+            input(type="submit" value="Search")
+block content
+        each item in movies
+            +movie(item)
+ 
+            
+            
