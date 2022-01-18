@@ -1,0 +1,13 @@
+mixin movie(movie)
+  div 
+    h4 
+      a(href=`/movies/${movie.id}`)=movie.title 
+    p=movie.summary 
+    ul 
+      each genre in movie.genres 
+        li=genre 
+    small Year: #{movie.year}
+    br
+    small Rating: #{movie.rating}
+    br
+    hr

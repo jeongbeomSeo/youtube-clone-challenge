@@ -1,0 +1,15 @@
+extends base.pug
+
+block content
+  div 
+    p=movie.summary 
+    ul
+      each genre in movie.genres 
+        li=genre
+    small Year: #{movie.year}
+    br
+    small Rating: #{movie.rating}
+    br
+    a(href=`/movies/${movie.id}/edit`) Edit &rarr;
+    br
+    a(href=`/movies/${movie.id}/delete`) Delete Movie &rarr;

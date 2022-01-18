@@ -1,0 +1,9 @@
+extends base.pug
+include mixins/movie.pug
+
+block content
+  div 
+    each movie in movies 
+      +movie(movie)
+    else 
+      li Sorry nothing found.
